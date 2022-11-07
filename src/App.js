@@ -11,11 +11,24 @@ function App() {
   useState();
 
   const [tareas , setTareas] = useState(data);
+  const onComplete = (id) => {
+    console.log('task', id);
+
+    setTareas(tareas.map((todo) => {
+      return todo.id === Number(id) ? {...todo, completed: !todo.completed} : {...todo};
+    }))
+
+    /*tareas.map((todo) => {
+      return todo.id === Number(id) ? {...todo, completed: true} : {...todo};
+    })*/
+
+
+  }
 
   return (
     <div className="container">
       <Header/>
-      < TodoList tareas ={tareas} />
+      <TodoList tareas ={tareas} onComplete = {onComplete}/>
    
     </div>
   );
