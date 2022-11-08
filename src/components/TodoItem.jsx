@@ -1,5 +1,6 @@
  
- function TodoItem({todo , onComplete}){
+ function TodoItem({todo , onComplete, onDeleteItem}){
+    
     const getStyle = () =>{
         return{
             textDecoration: todo.completed ? 'line-through' : 'none',
@@ -14,7 +15,7 @@
             <input type="checkbox" checked = {todo.completed}
             onChange={() => onComplete(todo.id)}/>
             {todo.task}
-            <button className="add-btn">x</button>
+            <button className="add-btn" onClick = {() => onDeleteItem(todo.id)}>Borrar</button>
         </div>
         </>
     );
