@@ -4,6 +4,7 @@ import Header from './components/Header'
 import TodoList from './components/TodoList';
 import { useState } from 'react';
 import data from './data.json'
+import TodoForm from './components/TodoForm';
 
 
 function App() {
@@ -23,8 +24,18 @@ function App() {
     setTareas([...tareas].filter(todo => todo.id !== id))
   }
   
+    const addTodo = (newTodo) => {
+      console.log('newTodo',newTodo)
+      let newItem = {id : + new Date(), task: newTodo, completed: false};
+
+      setTareas([...tareas, newItem]);
+    }
+
+
+
   return (
     <div className="container">
+      <TodoForm addTodo ={addTodo} />
       <Header/>
       <TodoList tareas = {tareas} onComplete = {onComplete} onDeleteItem = {onDeleteItem}/>
    
