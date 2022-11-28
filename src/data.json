@@ -9,7 +9,7 @@
 },{
     "id":3,
     "task": "lavar la ropa",
-    "completed": true
+    "completed": false
 },{
     "id":4,
     "task": "Tender la ropa",

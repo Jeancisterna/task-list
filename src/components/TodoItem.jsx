@@ -11,7 +11,7 @@
     }
     return (
         <>
-        <div style ={getStyle()}>
+        <div className='lista' style ={getStyle()}>
             <input type="checkbox" checked = {todo.completed}
             onChange={() => onComplete(todo.id)}/>
             {todo.task}

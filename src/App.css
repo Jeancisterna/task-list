@@ -1,13 +1,42 @@
 .container{
   margin: auto;
   width: 50%;
-  border: 1px solid aqua;
-  background-color: #32746A;
+  border: 1px solid #B19994;
+  background-color: #7EBC89;
   padding: 10px;
+  text-align: center;
 }
 
 .add-btn{
   float: right;
   background-color: red;
   color: #ffffff;
+}
+.Inicio{
+    text-decoration:none;
+    font-weight: 100;
+    font-size: 10px;
+    color:#333333;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+    padding-right:10px;
+    background-color:#FAEDCA;
+    border-color: #d8d8d8;
+    border-width: 2px;
+    border-style: solid;
+    border-radius:20px;
+    cursor: pointer;
+    }
+.titulo{
+  text-align: center;
+}
+.agregarlista{
+  text-align: center;
+}
+.lista{
+  text-align: left;
+}
+.formulario{
+  align-items: center;
 }

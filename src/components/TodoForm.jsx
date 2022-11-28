@@ -1,4 +1,7 @@
+import { FormControl } from '@chakra-ui/react';
 import React, { useState } from 'react'
+
+
 
  function TodoForm({addTodo}) {
     const [userInput , setUserInput ] = useState();
@@ -15,12 +18,15 @@ import React, { useState } from 'react'
         }
     }
 
+    
   return (
-    <div style = {{margin: 20}}>Agregar datos
-        <form onSubmit={handleSubmit}>
+    <div className='agregarlista' style = {{margin: 20}}>Agregar Lista
+        <form className='formulario' onSubmit={handleSubmit}>
             <input type = "text" value={userInput} onChange = {HandleOnChange}/>
-            <button> Agregar </button>
+            <button className='Inicio' > Agregar </button>
         </form>
+
+        
     
     </div>
   )
